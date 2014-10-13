@@ -1,0 +1,30 @@
+.container {
+	display: -ms-grid;
+	display: -webkit-grid;
+	display: grid;
+	-webkit-grid-auto-flow: row;
+	grid-auto-flow: row;
+}
+
+.post-it {
+	background: #fefabc;
+	padding: 15px;
+	margin: 10px;
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 12px;
+	color: #000;
+	width: 100px;
+	height: 75px;
+	
+	display: inline-block;
+
+	-moz-transform: rotate(1deg);
+	-webkit-transform: rotate(1deg);
+	-o-transform: rotate(1deg);
+	-ms-transform: rotate(1deg);
+	transform: rotate(1deg);
+	
+	box-shadow: 0px 4px 6px #333;
+	-moz-box-shadow: 0px 4px 6px #333;
+	-webkit-box-shadow: 0px 4px 6px #333;
+}
