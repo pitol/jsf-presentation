@@ -8,6 +8,8 @@ import javax.faces.component.UIInput;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import org.apache.log4j.Logger;
+
 import lombok.Getter;
 import lombok.Setter;
 import ppitol.jsf.post.PostIt;
@@ -19,19 +21,26 @@ import ppitol.jsf.post.PostItRepo;
  */
 @Named
 @RequestScoped
-@Getter
-@Setter
 public class PostBean {
 
+	private static final Logger log = Logger.getLogger(PostBean.class);
+	
 	@Inject
 	private PostItRepo repo;
 	
+	@Getter
+	@Setter
 	private UIInput inputPost;
+
+	@Getter
+	@Setter
 	private UICommand savePost;
 	
 	private String postIt;
 	
 	public String savePostIt() {
+		log.info("on savePostIt()");
+		
 		PostIt post = new PostIt();
 		post.setText(postIt);
 		
@@ -44,5 +53,15 @@ public class PostBean {
 	public List<PostIt> getAll() {
 		List<PostIt> all = repo.getAllPosts();
 		return all;
+	}
+
+	public String getPostIt() {
+		log.info("on getPostIt(): " + postIt);
+		return postIt;
+	}
+
+	public void setPostIt(String postIt) {
+		log.info("on setPostIt(" + postIt + ")");
+		this.postIt = postIt;
 	}
 }

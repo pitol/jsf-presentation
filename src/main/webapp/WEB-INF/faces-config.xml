@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<faces-config version="2.2"
-	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
 	
@@ -13,6 +12,60 @@
 			<default-locale>en</default-locale>
 			<supported-locale>pt</supported-locale>
 		</locale-config>
+		
+		<system-event-listener>
+			<system-event-listener-class>ppitol.jsf.events.ApplicationEventsListener</system-event-listener-class>
+			<system-event-class>javax.faces.event.PostConstructApplicationEvent</system-event-class>
+		</system-event-listener>
+		
+		<system-event-listener>
+			<system-event-listener-class>ppitol.jsf.events.ApplicationEventsListener</system-event-listener-class>
+			<system-event-class>javax.faces.event.PreDestroyApplicationEvent</system-event-class>
+		</system-event-listener>
+		
+		<system-event-listener>
+			<system-event-listener-class>ppitol.jsf.events.ViewEventsListener</system-event-listener-class>
+			<system-event-class>javax.faces.event.PreRenderViewEvent</system-event-class>
+		</system-event-listener>
+		
+		<system-event-listener>
+			<system-event-listener-class>ppitol.jsf.events.ViewEventsListener</system-event-listener-class>
+			<system-event-class>javax.faces.event.PostConstructViewMapEvent</system-event-class>
+		</system-event-listener>
+		
+		<system-event-listener>
+			<system-event-listener-class>ppitol.jsf.events.ViewEventsListener</system-event-listener-class>
+			<system-event-class>javax.faces.event.PreDestroyViewMapEvent</system-event-class>
+		</system-event-listener>
+		
+		<system-event-listener>
+			<system-event-listener-class>ppitol.jsf.events.InputEventsListener</system-event-listener-class>
+			<system-event-class>javax.faces.event.PostAddToViewEvent</system-event-class>
+		</system-event-listener>
+		
+		<system-event-listener>
+			<system-event-listener-class>ppitol.jsf.events.InputEventsListener</system-event-listener-class>
+			<system-event-class>javax.faces.event.PreRemoveFromViewEvent</system-event-class>
+		</system-event-listener>
+		
+		<system-event-listener>
+			<system-event-listener-class>ppitol.jsf.events.InputEventsListener</system-event-listener-class>
+			<system-event-class>javax.faces.event.PostRestoreStateEvent</system-event-class>
+		</system-event-listener>
+		
+		<system-event-listener>
+			<system-event-listener-class>ppitol.jsf.events.InputEventsListener</system-event-listener-class>
+			<system-event-class>javax.faces.event.PreValidateEvent</system-event-class>
+		</system-event-listener>
+		
+		<system-event-listener>
+			<system-event-listener-class>ppitol.jsf.events.InputEventsListener</system-event-listener-class>
+			<system-event-class>javax.faces.event.PostValidateEvent</system-event-class>
+		</system-event-listener>
+		
+		<system-event-listener>
+			<system-event-listener-class>ppitol.jsf.events.InputEventsListener</system-event-listener-class>
+			<system-event-class>javax.faces.event.PreRenderComponentEvent</system-event-class>
+		</system-event-listener>
 	</application>
-	
 </faces-config>
