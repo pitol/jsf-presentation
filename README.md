@@ -34,4 +34,4 @@ If you have a proper wildfly installation, you can use:
 $ mvn -Djboss-as.home=/path/to/wildfly-8.1 wildfly:run
 ```
 
-When saving the notes and redisplaying the page, check the wildfly console (the shell, when running with maven) to see the event listener's messages for the lifecycle and application events.
+When saving the notes and redisplaying the page, check the wildfly log (or the shell, when running with maven) to see the event listener's messages for the lifecycle and application events.
