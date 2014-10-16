@@ -1,9 +1,5 @@
-.container {
-	display: -ms-grid;
-	display: -webkit-grid;
-	display: grid;
-	-webkit-grid-auto-flow: row;
-	grid-auto-flow: row;
+.error {
+	color: red;
 }
 
 .post-it {

@@ -17,7 +17,11 @@
 <h:body>
 	<h:form>
 		<h:inputText id="inputPost" styleClass="post-it"
-			value="#{postBean.postIt}"/>
+			value="#{postBean.postIt}">
+			<f:validateRequired for="inputPost"/>
+			<f:validateLength for="inputPost" maximum="10"/>
+		</h:inputText>
+		<h:message for="inputPost" showSummary="true" showDetail="false" styleClass="error"/>
 		<br/>
 		<h:commandButton id="savePost" value="#{msg.saveNote}"
 			action="#{postBean.savePostIt}" />
