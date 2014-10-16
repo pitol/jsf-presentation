@@ -1,17 +1,16 @@
 package ppitol.jsf;
 
-import java.util.List;
-
 import javax.enterprise.context.RequestScoped;
 import javax.faces.component.UICommand;
 import javax.faces.component.UIInput;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import org.apache.log4j.Logger;
-
 import lombok.Getter;
 import lombok.Setter;
+
+import org.apache.log4j.Logger;
+
 import ppitol.jsf.post.PostIt;
 import ppitol.jsf.post.PostItRepo;
 
