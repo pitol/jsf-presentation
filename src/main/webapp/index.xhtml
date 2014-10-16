@@ -16,19 +16,20 @@
 
 <h:body>
 	<h:form>
-		<h:inputText id="inputPost" styleClass="post-it"
+		<h:inputTextarea id="inputPost" styleClass="post-it"
 			value="#{postBean.postIt}">
 			<f:validateRequired for="inputPost"/>
-			<f:validateLength for="inputPost" maximum="10"/>
-		</h:inputText>
+			<f:validateLength for="inputPost" maximum="60"/>
+		</h:inputTextarea>
 		<h:message for="inputPost" showSummary="true" showDetail="false" styleClass="error"/>
 		<br/>
-		<h:commandButton id="savePost" value="#{msg.saveNote}"
+		<h:commandButton id="savePost" styleClass="button"
+			value="#{msg.saveNote}"
 			action="#{postBean.savePostIt}" />
 		<br/>
 		
 		<ui:repeat var="post" value="#{postItRepo.allPosts}">
-			<div class="post-it">#{post.text}</div>
+			<textarea  readonly="readonly" class="post-it">#{post.text}</textarea>
 		</ui:repeat>
 	</h:form>
 	
