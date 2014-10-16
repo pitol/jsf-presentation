@@ -49,11 +49,6 @@ public class PostBean {
 		postIt = null;
 		return "index";
 	}
-	
-	public List<PostIt> getAll() {
-		List<PostIt> all = repo.getAllPosts();
-		return all;
-	}
 
 	public String getPostIt() {
 		log.info("on getPostIt(): " + postIt);
